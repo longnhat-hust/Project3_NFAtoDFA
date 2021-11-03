@@ -171,9 +171,14 @@ namespace Project2_Recognition
         //
         // Hàm kiểm tra xâu vào có thuộc hay không
         //
+        string Path;
         bool CheckWord(string word)
         {
+            Path = null;
+
             CurrentState = InitialState();
+            Path = CurrentState.Name;
+
             State tmpState;
 
             char[] chrWord = word.ToCharArray();
@@ -184,6 +189,7 @@ namespace Project2_Recognition
                 if (tmpState != null)
                 {
                     CurrentState = tmpState;
+                    Path += "→" + CurrentState.Name;
                 }
                 else return false;
             }
@@ -207,11 +213,13 @@ namespace Project2_Recognition
         //
         void Accept()
         {
+            txbWord.Text += "\r\n" + Path;
             txbWord.ForeColor = Color.Lime;
             MessageBox.Show("Input is accepted","Result",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         void Reject()
         {
+            txbWord.Text += "\r\n" + Path;
             txbWord.ForeColor = Color.Red;
             MessageBox.Show("Input is rejected", "Result", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
