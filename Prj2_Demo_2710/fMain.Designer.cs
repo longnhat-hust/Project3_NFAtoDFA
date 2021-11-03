@@ -71,7 +71,7 @@
             this.txbPreview.Name = "txbPreview";
             this.txbPreview.ReadOnly = true;
             this.txbPreview.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txbPreview.Size = new System.Drawing.Size(534, 444);
+            this.txbPreview.Size = new System.Drawing.Size(309, 552);
             this.txbPreview.TabIndex = 4;
             // 
             // txbLink
@@ -81,9 +81,9 @@
             this.txbLink.BackColor = System.Drawing.Color.Black;
             this.txbLink.Font = new System.Drawing.Font("Linh Avenir", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbLink.ForeColor = System.Drawing.Color.White;
-            this.txbLink.Location = new System.Drawing.Point(104, 3);
+            this.txbLink.Location = new System.Drawing.Point(104, 5);
             this.txbLink.Name = "txbLink";
-            this.txbLink.Size = new System.Drawing.Size(433, 26);
+            this.txbLink.Size = new System.Drawing.Size(208, 26);
             this.txbLink.TabIndex = 0;
             this.txbLink.TextChanged += new System.EventHandler(this.txbLink_TextChanged);
             // 
@@ -98,9 +98,9 @@
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.Font = new System.Drawing.Font("HelveticaNeue MediumCond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.Color.Black;
-            this.btnCheck.Location = new System.Drawing.Point(3, 439);
+            this.btnCheck.Location = new System.Drawing.Point(3, 544);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(603, 46);
+            this.btnCheck.Size = new System.Drawing.Size(821, 46);
             this.btnCheck.TabIndex = 3;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.txbWord.Multiline = true;
             this.txbWord.Name = "txbWord";
             this.txbWord.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txbWord.Size = new System.Drawing.Size(603, 430);
+            this.txbWord.Size = new System.Drawing.Size(821, 535);
             this.txbWord.TabIndex = 2;
             this.txbWord.TextChanged += new System.EventHandler(this.txbWord_TextChanged);
             // 
@@ -142,8 +142,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.txbWord);
             this.splitContainer1.Panel2.Controls.Add(this.btnCheck);
             this.splitContainer1.Panel2MinSize = 92;
-            this.splitContainer1.Size = new System.Drawing.Size(1149, 485);
-            this.splitContainer1.SplitterDistance = 540;
+            this.splitContainer1.Size = new System.Drawing.Size(1146, 593);
+            this.splitContainer1.SplitterDistance = 315;
             this.splitContainer1.TabIndex = 7;
             // 
             // fMain
@@ -151,7 +151,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1173, 509);
+            this.ClientSize = new System.Drawing.Size(1170, 617);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(393, 157);

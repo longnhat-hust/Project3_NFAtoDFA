@@ -85,10 +85,13 @@ namespace Project2_Recognition
             }
         }
         //
-        // Kiểm tra tệp Jff có hợp lệ hay không
+        // Lấy các thông tin của tệp Jff
         //
-        bool GetInfoFileJff(string link)
+        void GetInfoFileJff(string link)
         {
+            MainStructure = null;
+            txbPreview.Text = null;
+
             if (File.Exists(link))
             {
                 FileInfo fi = new FileInfo(link);
@@ -106,13 +109,9 @@ namespace Project2_Recognition
 
                         txbLink.Text = link;
                         txbPreview.Text = content;
-                        return true;
                     }
-                    else return false;
                 }
-                else return false;
             }
-            else return false;
         }
         //
         // Chọn file
@@ -123,15 +122,12 @@ namespace Project2_Recognition
             ofd.Filter = "JFLAP files (*.jff)|*.jff";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                if (!GetInfoFileJff(ofd.FileName))
-                {
-                    MessageBox.Show("Error File!", "Oops...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                GetInfoFileJff(ofd.FileName);
             }
         }
         private void txbLink_TextChanged(object sender, EventArgs e)
-        {
-            GetInfoFileJff(txbLink.Text);
+        {        
+            GetInfoFileJff(txbLink.Text);           
         }
         //
         // 
@@ -205,8 +201,12 @@ namespace Project2_Recognition
         //
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            if (CheckWord(txbWord.Text)) Accept();
-            else Reject();
+            if (MainStructure != null)
+            {
+                if (CheckWord(txbWord.Text)) Accept();
+                else Reject();
+            }
+            else MessageBox.Show("Invalid input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         //
         //
