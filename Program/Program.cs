@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project2_Recognition
+namespace Project3_NFAtoDFA
 {
     static class Program
     {

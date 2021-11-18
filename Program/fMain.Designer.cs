@@ -1,4 +1,4 @@
-﻿namespace Project2_Recognition
+﻿namespace Project3_NFAtoDFA
 {
     partial class fMain
     {
@@ -32,8 +32,8 @@
             this.btnBrowser = new System.Windows.Forms.Button();
             this.txbPreview = new System.Windows.Forms.TextBox();
             this.txbLink = new System.Windows.Forms.TextBox();
-            this.btnCheck = new System.Windows.Forms.Button();
-            this.txbWord = new System.Windows.Forms.TextBox();
+            this.btnConvert = new System.Windows.Forms.Button();
+            this.txbResult = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -54,7 +54,7 @@
             this.btnBrowser.Name = "btnBrowser";
             this.btnBrowser.Size = new System.Drawing.Size(95, 29);
             this.btnBrowser.TabIndex = 1;
-            this.btnBrowser.Text = "Browser";
+            this.btnBrowser.Text = "Browse";
             this.btnBrowser.UseVisualStyleBackColor = false;
             this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
             // 
@@ -71,7 +71,7 @@
             this.txbPreview.Name = "txbPreview";
             this.txbPreview.ReadOnly = true;
             this.txbPreview.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txbPreview.Size = new System.Drawing.Size(309, 552);
+            this.txbPreview.Size = new System.Drawing.Size(392, 357);
             this.txbPreview.TabIndex = 4;
             // 
             // txbLink
@@ -83,44 +83,43 @@
             this.txbLink.ForeColor = System.Drawing.Color.White;
             this.txbLink.Location = new System.Drawing.Point(104, 5);
             this.txbLink.Name = "txbLink";
-            this.txbLink.Size = new System.Drawing.Size(208, 26);
+            this.txbLink.Size = new System.Drawing.Size(291, 26);
             this.txbLink.TabIndex = 0;
             this.txbLink.TextChanged += new System.EventHandler(this.txbLink_TextChanged);
             // 
-            // btnCheck
+            // btnConvert
             // 
-            this.btnCheck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnConvert.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCheck.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheck.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCheck.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheck.Font = new System.Drawing.Font("HelveticaNeue MediumCond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.ForeColor = System.Drawing.Color.Black;
-            this.btnCheck.Location = new System.Drawing.Point(3, 544);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(821, 46);
-            this.btnCheck.TabIndex = 3;
-            this.btnCheck.Text = "Check";
-            this.btnCheck.UseVisualStyleBackColor = false;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            this.btnConvert.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnConvert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConvert.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnConvert.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnConvert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConvert.Font = new System.Drawing.Font("HelveticaNeue MediumCond", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvert.ForeColor = System.Drawing.Color.Black;
+            this.btnConvert.Location = new System.Drawing.Point(3, 0);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(413, 46);
+            this.btnConvert.TabIndex = 3;
+            this.btnConvert.Text = "Convert to DFA";
+            this.btnConvert.UseVisualStyleBackColor = false;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
-            // txbWord
+            // txbResult
             // 
-            this.txbWord.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbWord.BackColor = System.Drawing.Color.Black;
-            this.txbWord.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbWord.ForeColor = System.Drawing.Color.Lime;
-            this.txbWord.Location = new System.Drawing.Point(3, 3);
-            this.txbWord.Multiline = true;
-            this.txbWord.Name = "txbWord";
-            this.txbWord.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txbWord.Size = new System.Drawing.Size(821, 535);
-            this.txbWord.TabIndex = 2;
-            this.txbWord.TextChanged += new System.EventHandler(this.txbWord_TextChanged);
+            this.txbResult.BackColor = System.Drawing.Color.Black;
+            this.txbResult.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbResult.ForeColor = System.Drawing.Color.Lime;
+            this.txbResult.Location = new System.Drawing.Point(3, 52);
+            this.txbResult.Multiline = true;
+            this.txbResult.Name = "txbResult";
+            this.txbResult.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txbResult.Size = new System.Drawing.Size(413, 343);
+            this.txbResult.TabIndex = 2;
             // 
             // splitContainer1
             // 
@@ -139,11 +138,11 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.txbWord);
-            this.splitContainer1.Panel2.Controls.Add(this.btnCheck);
-            this.splitContainer1.Panel2MinSize = 92;
-            this.splitContainer1.Size = new System.Drawing.Size(1146, 593);
-            this.splitContainer1.SplitterDistance = 315;
+            this.splitContainer1.Panel2.Controls.Add(this.txbResult);
+            this.splitContainer1.Panel2.Controls.Add(this.btnConvert);
+            this.splitContainer1.Panel2MinSize = 174;
+            this.splitContainer1.Size = new System.Drawing.Size(818, 395);
+            this.splitContainer1.SplitterDistance = 398;
             this.splitContainer1.TabIndex = 7;
             // 
             // fMain
@@ -151,13 +150,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1170, 617);
+            this.ClientSize = new System.Drawing.Size(842, 419);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(393, 157);
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Project2_Recognition";
+            this.Text = "Project3_NFAtoDFA";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -173,8 +172,8 @@
         private System.Windows.Forms.Button btnBrowser;
         private System.Windows.Forms.TextBox txbPreview;
         private System.Windows.Forms.TextBox txbLink;
-        private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.TextBox txbWord;
+        private System.Windows.Forms.Button btnConvert;
+        private System.Windows.Forms.TextBox txbResult;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

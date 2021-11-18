@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B91ADDED-047B-4DB1-A7D1-FFB9C14087DC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Project2_Recognition</RootNamespace>
-    <AssemblyName>Project2_Recognition</AssemblyName>
+    <RootNamespace>Project3_NFAtoDFA</RootNamespace>
+    <AssemblyName>Projec3_NFAtoDFA</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -83,7 +83,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon-01.ico" />
     <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

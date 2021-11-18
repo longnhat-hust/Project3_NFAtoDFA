@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project2_Recognition", "Prj2_Demo_2710\Project2_Recognition.csproj", "{B91ADDED-047B-4DB1-A7D1-FFB9C14087DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project3_NFAtoDFA", "Program\Project3_NFAtoDFA.csproj", "{B91ADDED-047B-4DB1-A7D1-FFB9C14087DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
